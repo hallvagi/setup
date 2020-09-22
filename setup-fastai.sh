@@ -2,7 +2,7 @@
 set -e
 
 # create separate fastai environment
-conda create -nyq fastai
+conda create -n fastai -yq
 conda activate fastai
 
 #install libs to env with mamba
