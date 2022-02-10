@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -e
+set -eou pipefail
 
 cd
 
@@ -18,8 +18,8 @@ esac
 
 cat << EOF > .condarc
 channels:
+  - fastai
   - fastchan
-  - pytorch
   - defaults
 channel_priority: strict
 EOF
@@ -28,3 +28,5 @@ wget $DOWNLOAD
 bash Miniconda3-latest*.sh -b
 ~/miniconda3/bin/conda init $SHELL_NAME
 rm Miniconda3-latest*.sh
+
+cd -
