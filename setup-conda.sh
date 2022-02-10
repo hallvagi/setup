@@ -18,7 +18,7 @@ esac
 
 cat << EOF > .condarc
 channels:
-  - fastai
+  - fastchan
   - pytorch
   - defaults
 channel_priority: strict
